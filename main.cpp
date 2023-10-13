@@ -5,6 +5,7 @@
 #include <string>
 #include <math.h>
 #include <conio.h>
+#include <iomanip>
 
 using namespace std;
 
@@ -24,16 +25,27 @@ int main() {
 
 int RealMain() {
 	int input_menu;
-	do {
+	for( ; ; ) {
 		system("cls");
-		menu();
+		Menu();
 		cout << "Nhập: "; cin >> input_menu;
-		if(input_menu == 0) {
-			return 0;
-		} else {
-			input(input_menu);
+		if (input_menu == 1) {
+			system("cls");
+			Menulabs1();
+			cout << "Nhập: "; cin >> input_menu;
+			InputLabs1(input_menu);
+			break;
+		} else if (input_menu == 2) {
+			system("cls");
+			Menulabs2();
+			cout << "Nhập: "; cin >> input_menu;
+			InputLabs2(input_menu);
+			break;
+		} else if(input_menu == 0) {
+			break;
 		}
-	} while (true);
+	}
+	return 0;
 }
 
 // Start Custom Cpp

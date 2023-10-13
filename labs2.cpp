@@ -282,18 +282,34 @@ int Labs2_ThuTrongTuan() {
 	return menu;
 }
 
-int ChuyenDoiHeMau(int r, int g, int b, int &c, int &m, int &y, int &k) {
-	int temp = max({r, g, b});
-	k = 1 - temp / 255;
-	c = (1 - r / 255 - k) / (1 - k);
-	m = (1 - g / 255 - k) / (1 - k);
-	y = (1 - b / 255 - k) / (1 - k);
+int ChuyenDoiHeMau(double r, double g, double b, double &c, double &m, double &y, double &k) {
+    // Tính giá trị K (Key - Đen)
+    k = 1 - max({r / 255.0, g / 255.0, b / 255.0});
+
+    // Trường hợp đặc biệt: nếu mọi giá trị RGB đều là 0, thì K là 1, và C, M, Y là 0.
+    if (r == 0 && g == 0 && b == 0) {
+		c = 0.00;
+		m = 0.00;
+		y = 0.00;
+		k = 0.00;
+    } else {
+        // Tính giá trị C (Cyan), M (Magenta), và Y (Yellow)
+        c = (1 - r / 255.0 - k) / (1 - k);
+        m = (1 - g / 255.0 - k) / (1 - k);
+        y = (1 - b / 255.0 - k) / (1 - k);
+
+        // In giá trị tương ứng
+		// c = c * 100;
+		// m = m * 100;
+        // y = y * 100;
+        // k = k * 100;
+    }
 	
 	return 0;
 }
 
 int Labs2_ChuyenDoiHeMau() {
-	int r, g, b, c, m, y, k;
+	double r, g, b, c, m, y, k;
 	cout << "\nHệ màu RGB với 3 giá trị R, G, B luôn lớn -1 và nhỏ hơn 256" << endl;
 	for ( ; ; ) {
 		cout << "Nhập vào R: "; cin >> r;
@@ -309,6 +325,79 @@ int Labs2_ChuyenDoiHeMau() {
 	
 	cout << "\nSau khi chuyển đổi hệ màu RGB: " << r << ", " << g << ", " << b << endl;
 	cout << "Ta có hệ màu CMYK với giá trị: " << c << ", " << m << ", " << y << ", " << k << endl;
+
+	// Start Menu
+	int menu = RM();
+	// End Menu
+	return menu;
+}
+
+double ChuyenDoiThangDoNhietDo(double t, double &f, double &k, double &r) {
+	f = t * 9 / 5 + 32;
+	k = t + 273.15;
+	r = k * 9 / 5;
+
+	return 0;
+}
+
+int Labs2_ChuyenDoiThangDoNhietDo() {
+	double t, f, k, r;
+	cout << "\nNhập vào nhiệt độ muốn chuyển đổi (Celsius): "; cin >> t;
+	
+	ChuyenDoiThangDoNhietDo(t, f, k, r);
+	
+	cout << "\nTừ nhiệt độ (Celsius) " << t << ":\n";
+	cout << " - Kelvin (K): " << k << "\n";
+	cout << " - Fahrenheit (F): " << k << "\n";
+	cout << " - Rankine (R): " << r << "\n";
+	
+	// Start Menu
+	int menu = RM();
+	// End Menu
+	return menu;
+}
+
+double ThanhToanCongNo(double m, double l, double y) {
+	l /= 100;
+	int month = y * 12;
+	double p = m * (l / (1 - pow(1 + l, -month)));
+	return p;
+}
+
+int Labs2_ThanhToanCongNo() {
+	double m, l, y;
+	cout << "\nNhập vào số tiền vay [M]: "; cin >> m;
+	cout << "\nNhập vào số năm [Y]: "; cin >> y;
+	cout << "\nNhập vào lãi xuất [L]: "; cin >> l;
+
+	cout << "Số tiền phải trả hàng tháng là: " << ThanhToanCongNo(m, l, y) << endl;
+	
+	// Start Menu
+	int menu = RM();
+	// End Menu
+	return menu;
+}
+
+int DaGiacLoi(int n, int &a, int &b) {
+	// Tổng các góc của đa giác lồi có n cạnh.
+	a = ((n - 2) * 180);
+	// Tổng đường chéo của đã cho.
+	b = (n * (n - 3) / 2);
+	
+	return 0;
+}
+
+int Labs2_DaGiacLoi() {
+	int n, a, b;
+	do {
+		cout << "\nNhập vào số cạnh của đa giác [ít nhất 3 cạnh]: ";
+		cin >> n;
+	} while (n < 3);
+
+	DaGiacLoi(n, a, b);
+	
+	cout << "Tổng các góc của đa giác lồi có " << n << " cạnh là " << a;
+	cout << "\nTổng số đường chéo của đa giác có " << n << " cạnh là " << b << endl;
 
 	// Start Menu
 	int menu = RM();

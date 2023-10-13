@@ -53,3 +53,12 @@ int Labs2_ThuTrongTuan();
 
 int ChuyenDoiHeMau(int r, int g, int b, int &c, int &m, int &y, int &k);
 int Labs2_ChuyenDoiHeMau();
+
+double ChuyenDoiThangDoNhietDo(double t, double &f, double &k, double &r);
+int Labs2_ChuyenDoiThangDoNhietDo();
+
+double ThanhToanCongNo(double m, double l, double y);
+int Labs2_ThanhToanCongNo();
+
+int DaGiacLoi(int n, int &a, int &b);
+int Labs2_DaGiacLoi();
