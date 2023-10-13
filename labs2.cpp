@@ -1,7 +1,3 @@
-using namespace std;
-
-const double PI = 3.1415926;
-
 double Labs2_ChuViHinhTron(double r) {
 	return (r * 2) * PI;
 }
