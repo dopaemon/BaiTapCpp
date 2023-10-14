@@ -5,15 +5,35 @@
 // Utils
 int RM();
 int line(int a, int b);
-int menu();
 int input(int a);
 int RealMain();
+int Menu();
+int Menulabs1();
+int Menulabs2();
+int InputLabs1(int a);
+int InputLabs2(int a);
 
 // labs1
-int test1_labs1();
-int test2_cout();
-int test2_for();
-int test2_labs1();
+int Labs1_Bien();
+
+int Labs1_VeHinhCout();
+int Labs1_VeHinhFor();
+int Labs1_VeHinh();
+
+int Labs1_PhepGan();
+
+int Labs1_ChuViDienTichHinhTamGiac();
+
+int Labs1_PhepToan();
+
+int Labs1_SoLon();
+
+int Labs1_LuyThua();
+
+int Labs1_DanhSachSinhVien();
+
+int Labs1_AsciiArtt();
+
 
 // labs2
 double Labs2_ChuViHinhTron(double r);

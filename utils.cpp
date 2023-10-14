@@ -27,8 +27,8 @@ int Menu() {
 		 << "Môn: Nguyên Lý Lập Trình Cấu Trúc" << endl;
 	line(35, 1);
 	cout << "Menu bài tập:" << endl
-		 << "1 - Labs 1" << endl
-		 << "2 - Labs 2" << endl;
+		 << " 1 - Labs 1" << endl
+		 << " 2 - Labs 2" << endl;
 	line(35, 1);
 	cout << "Options:" << endl
 		 << " 0 - Exits\n";
@@ -46,7 +46,19 @@ int Menulabs1() {
 	cout << "Menu bài tập:" << endl
 		 << "Labs 1:" << endl
 		 << " 1 - Biến" << endl
-		 << " 2 - Vẽ Hình" << endl;
+		 << " 2 - Vẽ Hình" << endl
+		 << " 3 - Phép gán" << endl
+		 << " 4 - Chu vi diện tích hình tam giác" << endl
+		 << " 5 - Đổi giây sang giờ" << endl
+		 << " 6 - Phép toán" << endl
+		 << " 7 - Số lớn" << endl
+		 << " 8 - Lũy thừa" << endl
+		 << " 9 - Hình thang cân" << endl
+		 << " 10 - Danh sách sinh viên" << endl
+		 << " 11 - Hình trụ tròn" << endl
+		 << " 12 - Hình cầu" << endl
+		 << " 13 - ASCII ART" << endl
+		 << " 14 - Thứ trong tuần" << endl;
 	line(35, 1);
 	cout << "Options:" << endl
 		 << " 0 - Exits\n";
@@ -88,13 +100,95 @@ int InputLabs1(int a) {
 	switch (a) {
 		case 0: exit(0);
 		case 1:
-			if (test1_labs1() == 0) {
+			if (Labs1_Bien() == 0) {
 				break;
 			} else {
 				RealMain();
 			}
 		case 2:
-			if (test2_labs1() == 0) {
+			if (Labs1_VeHinh() == 0) {
+				break;
+			} else {
+				RealMain();
+			}
+		case 3:
+			if (Labs1_PhepGan() == 0) {
+				break;
+			} else {
+				RealMain();
+			}
+		case 4:
+			if (Labs1_ChuViDienTichHinhTamGiac() == 0) {
+				break;
+			} else {
+				RealMain();
+			}
+		case 5:
+			if (Labs2_time_corvert() == 0) {
+				exit(0);
+				break;
+			} else {
+				RealMain();
+			}
+		case 6:
+			if (Labs1_PhepToan() == 0) {
+				exit(0);
+				break;
+			} else {
+				RealMain();
+			}
+		case 7:
+			if (Labs1_SoLon() == 0) {
+				exit(0);
+				break;
+			} else {
+				RealMain();
+			}
+		case 8:
+			if (Labs1_LuyThua() == 0) {
+				exit(0);
+				break;
+			} else {
+				RealMain();
+			}
+		case 9:
+			if (Labs2_HinhThang() == 0) {
+				exit(0);
+				break;
+			} else {
+				RealMain();
+			}
+		case 10:
+			if (Labs1_DanhSachSinhVien() == 0) {
+				exit(0);
+				break;
+			} else {
+				RealMain();
+			}
+		case 11:
+			if (Labs2_HinhTruTron() == 0) {
+				exit(0);
+				break;
+			} else {
+				RealMain();
+			}
+		case 12:
+			if (Labs2_HinhCau() == 0) {
+				exit(0);
+				break;
+			} else {
+				RealMain();
+			}
+		case 13:
+			if (Labs1_AsciiArtt() == 0) {
+				exit(0);
+				break;
+			} else {
+				RealMain();
+			}
+		case 14:
+			if (Labs2_ThuTrongTuan() == 0) {
+				exit(0);
 				break;
 			} else {
 				RealMain();

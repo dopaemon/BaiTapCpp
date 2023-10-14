@@ -37,7 +37,7 @@ int labs2_time(int itime) {
 	int hour = itime / 3600;
 	int second = itime % 60;
 	int minute = (itime % 3600) / 60;
-	cout << itime << " giây bằng " << hour << ":" << minute << ":" << second << endl;
+	cout << endl << itime << " giây bằng " << hour << " giờ " << minute << " phút và " << second << " giây" << endl;
 	return 0;
 }
 
