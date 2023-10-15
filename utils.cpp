@@ -28,7 +28,8 @@ int Menu() {
 	line(35, 1);
 	cout << "Menu bài tập:" << endl
 		 << " 1 - Labs 1" << endl
-		 << " 2 - Labs 2" << endl;
+		 << " 2 - Labs 2" << endl
+		 << " -1 - Luyện Tập" << endl;
 	line(35, 1);
 	cout << "Options:" << endl
 		 << " 0 - Exits\n";
@@ -89,6 +90,23 @@ int Menulabs2() {
 		 << " 12 - Chuyển đổi thang đo nhiệt độ" << endl
 		 << " 13 - Thanh toán công nợ" << endl
 		 << " 14 - Đa giác lồi" << endl;
+	line(35, 1);
+	cout << "Options:" << endl
+		 << " 0 - Exits\n";
+	line(35, 1);
+	return 0;
+}
+
+int MenuLuyenTap() {
+	line(35, 1);
+	cout << "Tên: Trần Nguyễn Tuấn Anh" << endl
+		 << "Lớp: CTK47A" << endl
+		 << "MSSV: 2312577" << endl
+		 << "Môn: Nguyên Lý Lập Trình Cấu Trúc" << endl;
+	line(35, 1);
+	cout << "Menu bài tập:" << endl
+		 << "Luyện Tập: " << endl
+		 << " 1 - Hello, World!!!" << endl;
 	line(35, 1);
 	cout << "Options:" << endl
 		 << " 0 - Exits\n";

@@ -10,6 +10,7 @@ int RealMain();
 int Menu();
 int Menulabs1();
 int Menulabs2();
+int MenuLuyenTap();
 int InputLabs1(int a);
 int InputLabs2(int a);
 
