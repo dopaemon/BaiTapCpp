@@ -83,3 +83,10 @@ int Labs2_ThanhToanCongNo();
 
 int DaGiacLoi(int n, int &a, int &b);
 int Labs2_DaGiacLoi();
+
+// labs3
+int GiaiPTBacNhat(double a, double b);
+int Labs3_GiaiPTBacNhat();
+
+double PhepToanSoHoc(double x, double y, char a);
+int Labs3_PhepToanSoHoc();

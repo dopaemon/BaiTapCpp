@@ -29,13 +29,7 @@ int RealMain() {
 		system("cls");
 		Menu();
 		cout << "Nhập: "; cin >> input_menu;
-		if (input_menu == -1) {
-			system("cls");
-			MenuLuyenTap();
-			cout << "Nhập: "; cin >> input_menu;
-			InputLabs1(input_menu);
-			break;
-		} else if (input_menu == 1) {
+		if (input_menu == 1) {
 			system("cls");
 			Menulabs1();
 			cout << "Nhập: "; cin >> input_menu;
@@ -47,6 +41,12 @@ int RealMain() {
 			cout << "Nhập: "; cin >> input_menu;
 			InputLabs2(input_menu);
 			break;
+		} else if (input_menu == 3) {
+			system("cls");
+			Menulabs3();
+			cout << "Nhập: "; cin >> input_menu;
+			InputLabs3(input_menu);
+			break;
 		} else if(input_menu == 0) {
 			break;
 		}
@@ -57,4 +57,5 @@ int RealMain() {
 // Start Custom Cpp
 #include "labs1.cpp"
 #include "labs2.cpp"
+#include "labs3.cpp"
 // End Custom Cpp

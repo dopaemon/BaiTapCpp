@@ -29,7 +29,7 @@ int Menu() {
 	cout << "Menu bài tập:" << endl
 		 << " 1 - Labs 1" << endl
 		 << " 2 - Labs 2" << endl
-		 << " -1 - Luyện Tập" << endl;
+		 << " 3 - Labs 3" << endl;
 	line(35, 1);
 	cout << "Options:" << endl
 		 << " 0 - Exits\n";
@@ -97,7 +97,7 @@ int Menulabs2() {
 	return 0;
 }
 
-int MenuLuyenTap() {
+int Menulabs3() {
 	line(35, 1);
 	cout << "Tên: Trần Nguyễn Tuấn Anh" << endl
 		 << "Lớp: CTK47A" << endl
@@ -105,8 +105,9 @@ int MenuLuyenTap() {
 		 << "Môn: Nguyên Lý Lập Trình Cấu Trúc" << endl;
 	line(35, 1);
 	cout << "Menu bài tập:" << endl
-		 << "Luyện Tập: " << endl
-		 << " 1 - Hello, World!!!" << endl;
+		 << "Labs 3: " << endl
+		 << " 1 - Phương trình bậc nhất 1 ẩn" << endl
+		 << " 2 - Phép toán số học" << endl;
 	line(35, 1);
 	cout << "Options:" << endl
 		 << " 0 - Exits\n";
@@ -322,4 +323,25 @@ int InputLabs2(int a) {
 			cout << "Cần chọn ít nhất một lựa chọn !!!";
 	}
 	return 0;
+}
+
+int InputLabs3(int a) {
+	switch (a) {
+		case 0: exit(0);
+		case 1:
+			if (Labs3_GiaiPTBacNhat() == 0) {
+				break;
+			} else {
+				RealMain();
+			}
+		case 2:
+			if (Labs3_PhepToanSoHoc() == 0) {
+				break;
+			} else {
+				RealMain();
+			}
+		default:
+			cout << "Cần chọn ít nhất một lựa chọn !!!";
+	}
+	return a;
 }
