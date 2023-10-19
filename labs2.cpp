@@ -245,12 +245,13 @@ double Labs2_ChuyenDoiHeToaDo() {
 	double docao, phuongvi, phi, delta, h;
 	
 	cout << "\nNhập vào φ: "; cin >> phi;
-	cout << "\nNhập vào δ: "; cin >> delta;
+	cout << "Nhập vào δ: "; cin >> delta;
+	cout << "Nhập vào múi giờ (h): "; cin >> h;
 
 	ChuyenDoiHeToaDo(phi, delta, h, docao, phuongvi);
 
 	cout << "\nĐộ cao: " << docao << endl;
-	cout << "\nPhương vị: " << phuongvi << endl;
+	cout << "Phương vị: " << phuongvi << endl;
 	
 	// Start Menu
 	int menu = RM();
