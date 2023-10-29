@@ -5,7 +5,7 @@ int RM() {
 		cout << "\nBạn có muốn quay lại Menu không ? [0/1]: "; cin >> menu;
 		if (menu == 0 || menu == 1) { break; }
 	}
-	
+
 	return menu;
 }
 
@@ -117,7 +117,8 @@ int Menulabs3() {
 		 << "Labs 3: " << endl
 		 << " 1 - Phương trình bậc nhất 1 ẩn" << endl
 		 << " 2 - Phép toán số học" << endl
-		 << " 3 - Chuyển đổi cơ số" << endl;
+		 << " 3 - Chuyển đổi cơ số" << endl
+		 << " 4 - Số nguyên" << endl;
 	line(35, 1);
 	cout << "Options:" << endl
 		 << " 0 - Exits\n";
@@ -352,6 +353,12 @@ int InputLabs3(int a) {
 			}
 		case 3:
 			if (Labs3_ChuyenDoiCoSo() == 0) {
+				break;
+			} else {
+				RealMain();
+			}
+		case 4:
+			if (Labs3_SoNguyen() == 0) {
 				break;
 			} else {
 				RealMain();

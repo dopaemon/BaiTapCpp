@@ -95,3 +95,15 @@ int Labs3_output(int number);
 unsigned int Labs3_TimLuyThua(unsigned int b, unsigned int n);
 int Labs3_DoiCoSo(unsigned int n, unsigned int b);
 int Labs3_ChuyenDoiCoSo();
+
+int Labs3_SoNguyen_a(unsigned int n);
+int Labs3_SoNguyen_b(unsigned int n);
+int Labs3_SoNguyen_c(unsigned int n);
+int Labs3_SoNguyen_d(unsigned int n);
+int Labs3_SoNguyen_e(unsigned int n);
+int Labs3_SoNguyen_f(unsigned int n);
+int Labs3_SoNguyen_g(unsigned int n);
+int Labs3_SoNguyen_h(unsigned int n);
+int Labs3_SoNguyen_i(unsigned int n);
+int Labs3_SoNguyen_j(unsigned int n);
+int Labs3_SoNguyen();
