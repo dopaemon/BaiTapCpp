@@ -9,6 +9,15 @@ int RM() {
 	return menu;
 }
 
+int clear() {
+#if __linux__
+	system("clear");
+#else
+	system("cls");
+#endif
+	return 0;
+}
+
 int line(int a, int b) {
 	for (int i = 1; i <= a; i++ ) {
 		cout << "▓";
@@ -107,7 +116,8 @@ int Menulabs3() {
 	cout << "Menu bài tập:" << endl
 		 << "Labs 3: " << endl
 		 << " 1 - Phương trình bậc nhất 1 ẩn" << endl
-		 << " 2 - Phép toán số học" << endl;
+		 << " 2 - Phép toán số học" << endl
+		 << " 3 - Chuyển đổi cơ số" << endl;
 	line(35, 1);
 	cout << "Options:" << endl
 		 << " 0 - Exits\n";
@@ -336,6 +346,12 @@ int InputLabs3(int a) {
 			}
 		case 2:
 			if (Labs3_PhepToanSoHoc() == 0) {
+				break;
+			} else {
+				RealMain();
+			}
+		case 3:
+			if (Labs3_ChuyenDoiCoSo() == 0) {
 				break;
 			} else {
 				RealMain();

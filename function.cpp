@@ -90,3 +90,8 @@ int Labs3_GiaiPTBacNhat();
 
 double PhepToanSoHoc(double x, double y, char a);
 int Labs3_PhepToanSoHoc();
+
+int Labs3_output(int number);
+unsigned int Labs3_TimLuyThua(unsigned int b, unsigned int n);
+int Labs3_DoiCoSo(unsigned int n, unsigned int b);
+int Labs3_ChuyenDoiCoSo();

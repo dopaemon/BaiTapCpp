@@ -54,9 +54,62 @@ int Labs3_PhepToanSoHoc() {
 		if(a == '0') { break; }
 		cout << "\n" << x << " " << a << " " << y << " = " << PhepToanSoHoc(x, y, a) << endl;
 	}
-	
+
 	// Start Menu
 	int menu = RM();
 	// End Menu
 	return menu;
+}
+
+int Labs3_output(int number) {
+	if (number < 10) {
+		cout << number;
+	} else {
+		char c = 'A' + number - 10;
+		cout << c;
+	}
+	return 0;
+}
+
+unsigned int Labs3_TimLuyThua(unsigned int b, unsigned int n) {
+	unsigned int v = 1;
+	while (v * b <= n) {
+		v *= b;
+	}
+	return v;
+}
+
+int Labs3_DoiCoSo(unsigned int n, unsigned int b) {
+	unsigned int v = Labs3_TimLuyThua(b, n);
+
+	while (v > 0) {
+		if (n < v) {
+			Labs3_output(0);
+		} else {
+			unsigned int so = n / v;
+			Labs3_output(so);
+			n -= so * v;
+		}
+	v /= b;
+	}
+	return 0;
+}
+
+int Labs3_ChuyenDoiCoSo() {
+	unsigned int n, b;
+
+	do {
+                cout << "Nhập vào n [n > 0]: "; cin >> n;
+        } while (n <= 0);
+
+	do {
+		cout << "Nhập vào b [1 < b < 17]: "; cin >> b;
+	} while (b <= 1 || b >= 17);
+
+	cout << "\nGiá trị " << n << " ở hệ cơ số " << b << " là: "; Labs3_DoiCoSo(n, b); cout << endl;
+
+	// 10 11 12 13 14 15 16
+	// A  B  C  D  E  F  G
+
+	return 0;
 }
