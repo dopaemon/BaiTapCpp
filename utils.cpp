@@ -118,7 +118,8 @@ int Menulabs3() {
 		 << " 1 - Phương trình bậc nhất 1 ẩn" << endl
 		 << " 2 - Phép toán số học" << endl
 		 << " 3 - Chuyển đổi cơ số" << endl
-		 << " 4 - Số nguyên" << endl;
+		 << " 4 - Số nguyên" << endl
+		 << " 5 - Chỉ số khối cơ thể" << endl;
 	line(35, 1);
 	cout << "Options:" << endl
 		 << " 0 - Exits\n";
@@ -359,6 +360,12 @@ int InputLabs3(int a) {
 			}
 		case 4:
 			if (Labs3_SoNguyen() == 0) {
+				break;
+			} else {
+				RealMain();
+			}
+		case 5:
+			if (Labs3_ChiSoKhoiCoThe() == 0) {
 				break;
 			} else {
 				RealMain();

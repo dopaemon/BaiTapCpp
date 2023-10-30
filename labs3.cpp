@@ -304,3 +304,34 @@ int Labs3_SoNguyen() {
         // End Menu
         return menu;
 }
+
+int Labs3_ChiSoKhoiCoThe() {
+	double w, h;
+	cout << "\nNhập vào w: "; cin >> w;
+	cout << "Nhập vào h: "; cin >> h;
+
+	double bmi = w / (h * h);
+
+	cout << "Chỉ số khối cơ thể là: " << bmi << endl;
+
+	if (bmi < 15) {
+		cout << "Trạng thái cơ thể: Đói khát";
+	} else if (bmi < 17.5) {
+		cout << "Trạng thái cơ thể: Biếng ăn";
+	} else if (bmi < 18.5) {
+		cout << "Trạng thái cơ thể: Thiếu cân";
+	} else if ((bmi >= 18.5) && (bmi < 25)) {
+		cout << "Trạng thái cơ thể: Lý tưởng";
+	} else if ((bmi >= 25) && (bmi < 30)) {
+		cout << "Trạng thái cơ thể: Thừa cân";
+	} else if ((bmi >= 30) && (bmi < 40)) {
+		cout << "Trạng thái cơ thể: Béo phì";
+	} else if (bmi >= 40) {
+		cout << "Trạng thái cơ thể: Trẻ em bị béo phì";
+	}
+
+	// Start Menu
+        int menu = RM();
+        // End Menu
+        return menu;
+}

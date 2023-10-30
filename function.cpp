@@ -107,3 +107,5 @@ int Labs3_SoNguyen_h(unsigned int n);
 int Labs3_SoNguyen_i(unsigned int n);
 int Labs3_SoNguyen_j(unsigned int n);
 int Labs3_SoNguyen();
+
+int Labs3_ChiSoKhoiCoThe();
