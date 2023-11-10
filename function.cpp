@@ -108,4 +108,14 @@ int Labs3_SoNguyen_i(unsigned int n);
 int Labs3_SoNguyen_j(unsigned int n);
 int Labs3_SoNguyen();
 
+string ChuyenDoiHeCoSo(int n, int b);
+int Labs3_ChuyenDoiHeCoSo();
+
 int Labs3_ChiSoKhoiCoThe();
+
+int Labs3_SoNguyenTo_a();
+int Labs3_SoNguyenTo_b();
+int Labs3_SoNguyenTo_c();
+int Labs3_SoNguyenTo_d();
+int Labs3_SoNguyenTo_e();
+int Labs3_SoNguyenTo();

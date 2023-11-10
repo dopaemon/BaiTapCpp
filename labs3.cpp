@@ -307,8 +307,8 @@ int Labs3_SoNguyen() {
 
 int Labs3_ChiSoKhoiCoThe() {
 	double w, h;
-	cout << "\nNhập vào w: "; cin >> w;
-	cout << "Nhập vào h: "; cin >> h;
+	cout << "\nNhập vào chiều cao (đơn vị mét): "; cin >> h;
+	cout << "Nhập vào cân nặng (đơn vị kg): "; cin >> w;
 
 	double bmi = w / (h * h);
 
@@ -331,7 +331,203 @@ int Labs3_ChiSoKhoiCoThe() {
 	}
 
 	// Start Menu
-        int menu = RM();
-        // End Menu
-        return menu;
+    int menu = RM();
+    // End Menu
+    return menu;
+}
+
+string ChuyenDoiHeCoSo(int n, int b) {
+    string ketQua = "";
+    while (n > 0) {
+        int chuSo = n % b;
+        char kyTuChuSo;
+        if (chuSo < 10) {
+            kyTuChuSo = chuSo + '0';
+        } else {
+            kyTuChuSo = chuSo - 10 + 'A';
+        }
+        ketQua = kyTuChuSo + ketQua;
+        n /= b;
+    }
+    return ketQua.empty() ? "0" : ketQua;
+}
+
+int Labs3_ChuyenDoiHeCoSo() {
+	int n, b;
+
+    cout << "Nhập số nguyên dương n: ";
+    cin >> n;
+
+    cout << "Chọn hệ cơ số:\n";
+    cout << "1. Đổi sang hệ nhị phân (b=2)\n";
+    cout << "2. Đổi sang hệ bát phân (b=8)\n";
+    cout << "3. Đổi sang hệ thập lục phân (b=16)\n";
+    cout << "4. Đổi sang hệ cơ số 7 (b=7)\n";
+
+    cout << "[1, 2, 3, 4]: ";
+    cin >> b;
+
+    if ((b < 2) || (b > 16) || (b > 10 && b != 7)) {
+        cout << "Hệ cơ số không hợp lệ.\n";
+    } else {
+        string ketQua = ChuyenDoiHeCoSo(n, b);
+        cout << "Kết quả: " << ketQua << endl;
+    }
+
+	// Start Menu
+    int menu = RM();
+    // End Menu
+    return menu;
+}
+
+int Labs3_SoNguyenTo_a(int n) {
+	if (n < 2) {
+		cout << "\n" << n << " không phải số nguyên tố" << endl;
+	} else {
+		int c = 0;
+		for(int i = 2; i <= sqrt(n); i++) {
+			if (n % i == 0) {
+				c++;
+			}
+		}
+		
+		if (c != 0) {
+			cout << "\n" << n << " không phải số nguyên tố" << endl;
+		} else {
+			cout << "\n" << n << " là số nguyên tố" << endl;
+		}
+	}
+	return 0;
+}
+
+int Labs3_SoNguyenTo_b(int n) {
+	bool chk;
+	int a[n];
+	int count = 0;
+
+	if (n < 2) { chk = false; }
+	else { chk = true; }
+	for (int j = 2; j <= n; j++) {
+		chk = true;
+		for (int i = 2; i <= sqrt(j); i++) {
+			if (j % i == 0) {
+				chk = false;
+				break;
+			}
+		}
+		if (chk) { a[count] = j; count++; }
+	}
+	for (int i = 0; i < count; i++) {
+		cout << a[i] << "\t";
+		if ((i + 1) % 5 == 0) {
+			cout << endl;
+		}
+	}
+	if (count % 5 != 0) {
+		cout << endl;
+	}
+
+	return 0;
+}
+
+int Labs3_SoNguyenTo_c(int n) {
+	bool chk;
+	int count = 0;
+
+	if (n < 2) { chk = false; }
+	else { chk = true; }
+	for (int j = 2; j <= n; j++) {
+		chk = true;
+		for (int i = 2; i <= sqrt(j); i++) {
+			if (j % i == 0) {
+				chk = false;
+				break;
+			}
+		}
+		if (chk) { count++; }
+	}
+	cout << "Có " << count << " số nguyên tố trong dãy từ 1 đến " << n << endl;
+
+	return 0;
+}
+
+int Labs3_SoNguyenTo_d(int n) {
+	int count = 0;
+	int a[n];
+	int b[n];
+	int j = 2;
+	int p = 0;
+	bool chk;
+
+	for (int i = 2; i <= n; ++i) {
+		if (n % i == 0) {
+			a[j] = i;
+			j++;
+		}
+	}
+
+	for (int i = 2; i < j; i++) {
+		bool chk = true;
+
+		for (int m = 2; m <= sqrt(a[i]); m++) {
+			if (a[i] % m == 0) {
+				chk = false;
+				break;
+			}
+		}
+
+		if (chk) {
+			b[p] = a[i];
+			p++;
+			count = count + a[i];
+		}
+	}
+
+	cout << "Tổng của các ước số (Là số nguyên tố) là: ";
+	for (int o = 0; o < p; o++) {
+        if (o < p - 1) {
+            cout << b[o] << ", ";
+        } else {
+            cout << b[o];
+        }
+    }
+	cout << " là " << count << endl;
+
+	return 0;
+}
+
+int Labs3_SoNguyenTo_e(int n) {
+	cout << "Phân tích " << n << " thành tích các thừa số nguyên tố: ";
+
+    for (int i = 2; i <= n; ++i) {
+        while (n % i == 0) {
+            cout << i;
+            n /= i;
+
+            if (n > 1) {
+                cout << " * ";
+            }
+        }
+    }
+
+    cout << endl;
+	
+	return 0;
+}
+
+int Labs3_SoNguyenTo() {
+	int n;
+	cout << "Nhập vào N: ";
+	cin >> n;
+	cout << endl << "a) Kiểm tra n có phải là số nguyên tố (sử dụng vòng lặp for).";
+	Labs3_SoNguyenTo_a(n); cout << endl << "b) Xuất ra màn hình các số nguyên tố trong phạm vi từ 1 tới n, các số cách nhau 1 dấu Tab. Mỗi dòng chứa 5 số." << endl;
+	Labs3_SoNguyenTo_b(n); cout << endl << "c) Đếm số lượng số nguyên tố trong phạm vi từ 1 tới n." << endl;
+	Labs3_SoNguyenTo_c(n); cout << endl << "d) Tính tổng các ước số nguyên tố của n. Ví dụ: n = 30 có các ước 1, 2, 3, 5, 6, 10, 15, 30. Tổng các ước số nguyên tố là 2 + 3 + 5 = 10." << endl;
+	Labs3_SoNguyenTo_d(n); cout << endl << "e) Phân tích n thành tích các thừa số nguyên tố. Ví dụ: n = 12 = 2.2.3, n = 30 = 2.3.5." << endl;
+	Labs3_SoNguyenTo_e(n);
+
+	// Start Menu
+    int menu = RM();
+    // End Menu
+    return menu;
 }

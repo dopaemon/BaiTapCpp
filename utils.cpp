@@ -119,7 +119,9 @@ int Menulabs3() {
 		 << " 2 - Phép toán số học" << endl
 		 << " 3 - Chuyển đổi cơ số" << endl
 		 << " 4 - Số nguyên" << endl
-		 << " 5 - Chỉ số khối cơ thể" << endl;
+		 << " 5 - Đổi cơ số" << endl
+		 << " 6 - Chỉ số khối cơ thể" << endl
+		 << " 7 - Số nguyên tố" << endl;
 	line(35, 1);
 	cout << "Options:" << endl
 		 << " 0 - Exits\n";
@@ -365,7 +367,19 @@ int InputLabs3(int a) {
 				RealMain();
 			}
 		case 5:
+			if (Labs3_ChuyenDoiHeCoSo() == 0) {
+				break;
+			} else {
+				RealMain();
+			}
+		case 6:
 			if (Labs3_ChiSoKhoiCoThe() == 0) {
+				break;
+			} else {
+				RealMain();
+			}
+		case 7:
+			if (Labs3_SoNguyenTo() == 0) {
 				break;
 			} else {
 				RealMain();
