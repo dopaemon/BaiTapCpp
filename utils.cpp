@@ -121,7 +121,8 @@ int Menulabs3() {
 		 << " 4 - Số nguyên" << endl
 		 << " 5 - Đổi cơ số" << endl
 		 << " 6 - Chỉ số khối cơ thể" << endl
-		 << " 7 - Số nguyên tố" << endl;
+		 << " 7 - Số nguyên tố" << endl
+		 << " 8 - Ước số" << endl;
 	line(35, 1);
 	cout << "Options:" << endl
 		 << " 0 - Exits\n";
@@ -380,6 +381,12 @@ int InputLabs3(int a) {
 			}
 		case 7:
 			if (Labs3_SoNguyenTo() == 0) {
+				break;
+			} else {
+				RealMain();
+			}
+		case 8:
+			if (Labs3_UocSo() == 0) {
 				break;
 			} else {
 				RealMain();

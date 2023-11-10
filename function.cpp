@@ -113,9 +113,16 @@ int Labs3_ChuyenDoiHeCoSo();
 
 int Labs3_ChiSoKhoiCoThe();
 
-int Labs3_SoNguyenTo_a();
-int Labs3_SoNguyenTo_b();
-int Labs3_SoNguyenTo_c();
-int Labs3_SoNguyenTo_d();
-int Labs3_SoNguyenTo_e();
+int Labs3_SoNguyenTo_a(int n);
+int Labs3_SoNguyenTo_b(int n);
+int Labs3_SoNguyenTo_c(int n);
+int Labs3_SoNguyenTo_d(int n);
+int Labs3_SoNguyenTo_e(int n);
 int Labs3_SoNguyenTo();
+
+int Labs3_UocSo_a(int n);
+int Labs3_UocSo_b(int n);
+int Labs3_UocSo_c(int n);
+int Labs3_UocSo_d(int n);
+int Labs3_UocSo_e(int n);
+int Labs3_UocSo();

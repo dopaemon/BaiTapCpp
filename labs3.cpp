@@ -517,14 +517,94 @@ int Labs3_SoNguyenTo_e(int n) {
 
 int Labs3_SoNguyenTo() {
 	int n;
-	cout << "Nhập vào N: ";
-	cin >> n;
+	cout << "Nhập vào N: "; cin >> n;
 	cout << endl << "a) Kiểm tra n có phải là số nguyên tố (sử dụng vòng lặp for).";
 	Labs3_SoNguyenTo_a(n); cout << endl << "b) Xuất ra màn hình các số nguyên tố trong phạm vi từ 1 tới n, các số cách nhau 1 dấu Tab. Mỗi dòng chứa 5 số." << endl;
 	Labs3_SoNguyenTo_b(n); cout << endl << "c) Đếm số lượng số nguyên tố trong phạm vi từ 1 tới n." << endl;
 	Labs3_SoNguyenTo_c(n); cout << endl << "d) Tính tổng các ước số nguyên tố của n. Ví dụ: n = 30 có các ước 1, 2, 3, 5, 6, 10, 15, 30. Tổng các ước số nguyên tố là 2 + 3 + 5 = 10." << endl;
 	Labs3_SoNguyenTo_d(n); cout << endl << "e) Phân tích n thành tích các thừa số nguyên tố. Ví dụ: n = 12 = 2.2.3, n = 30 = 2.3.5." << endl;
 	Labs3_SoNguyenTo_e(n);
+
+	// Start Menu
+    int menu = RM();
+    // End Menu
+    return menu;
+}
+
+int Labs3_UocSo_a(int n) {
+	cout << "Các ước số của " << n << " là ";
+	for (int i = 1; i <= n; ++i) {
+		if (n % i == 0) {
+			if (i < n) {
+				cout << i << ", ";
+			} else if (i == n) {
+				cout << i << "." << endl;
+			}
+		}
+	}
+	return 0;
+}
+
+int Labs3_UocSo_b(int n) {
+	int count = 0;
+	cout << "\nSố lượng ước số của " << n << " là ";
+	for (int i = 1; i <= n; ++i) {
+		if (n % i == 0) {
+			count++;
+		}
+	}
+	cout << count << endl;
+	return 0;
+}
+
+int Labs3_UocSo_c(int n) {
+	int count = 0;
+	cout << "\nTổng các ước số của " << n << " là ";
+	for (int i = 1; i <= n; ++i) {
+		if (n % i == 0) {
+			count = count + i;
+		}
+	}
+	cout << count << endl;
+	return 0;
+}
+
+int Labs3_UocSo_d(int n) {
+    double x = n;
+    double y = 1.0;
+    double chinhxac = 1e-6;
+
+    while (x - y > chinhxac) {
+        x = (x + y) / 2;
+        y = n / x;
+    }
+
+	cout << "\nCăn bậc 2 của " << n << " là " << x << endl;
+
+    return 0;
+}
+
+int Labs3_UocSo_e(int n) {
+    int x = 1;
+
+    while (x * 2 <= n) {
+        x *= 2;
+    }
+
+	cout << "\nSố lớn nhất nhỏ hơn hoặc bằng " << n << " mà là lũy thừa của 2 là " << x << endl;
+
+    return 0;
+}
+
+int Labs3_UocSo() {
+	int n;
+	cout << "Nhập vào N: "; cin >> n;
+	cout << endl << "a) Xuất tất cả các ước số của n. Ví dụ: Các ước số của n = 12 là 1, 2, 3, 4, 6, 12." << endl;
+	Labs3_UocSo_a(n); cout << endl << "b) Đếm số lượng các ước số của n. Ví dụ: Số lượng ước số của n = 12 là 6.";
+	Labs3_UocSo_b(n); cout << endl << "c) Tính tổng các ước số của n. Ví dụ: Tổng các ước số của n = 12 là 28.";
+	Labs3_UocSo_c(n); cout << endl << "d) Tính căn bậc 2 của n (không sử dụng hàm sqrt).";
+	Labs3_UocSo_d(n); cout << endl << "e) Tìm số lớn nhất nhỏ hơn hoặc bằng n mà là lũy thừa của 2. Ví dụ: n = 1234 thì xuất 1024.";
+	Labs3_UocSo_e(n);
 
 	// Start Menu
     int menu = RM();
