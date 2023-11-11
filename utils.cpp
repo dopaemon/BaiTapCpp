@@ -123,7 +123,14 @@ int Menulabs3() {
 		 << " 6 - Chỉ số khối cơ thể" << endl
 		 << " 7 - Số nguyên tố" << endl
 		 << " 8 - Ước số" << endl
-		 << " 9 - Dãy số" << endl;
+		 << " 9 - Dãy số" << endl
+		 << " 10 - Căn bậc 2" << endl
+		 << " 11 - Ước chung bội chung" << endl
+		 << " 12 - Trò chơi đoán số" << endl
+		 << " 13 - Số định danh ISBN" << endl
+		 << " 14 - tài khoản tiết kiệm" << endl
+		 << " 15 - Hành trình xe lửa" << endl
+		 << " 16 - Trả Góp" << endl;
 	line(35, 1);
 	cout << "Options:" << endl
 		 << " 0 - Exits\n";
@@ -394,6 +401,48 @@ int InputLabs3(int a) {
 			}
 		case 9:
 			if (Labs3_DaySo() == 0) {
+				break;
+			} else {
+				RealMain();
+			}
+		case 10:
+			if (Labs3_CanBac2() == 0) {
+				break;
+			} else {
+				RealMain();
+			}
+		case 11:
+			if (Labs3_UocChungBoiChung() == 0) {
+				break;
+			} else {
+				RealMain();
+			}
+		case 12:
+			if (Labs3_TroChoiDoanSo() == 0) {
+				break;
+			} else {
+				RealMain();
+			}
+		case 13:
+			if (Labs3_SoDinhDanh() == 0) {
+				break;
+			} else {
+				RealMain();
+			}
+		case 14:
+			if (Labs3_TaiKhoanTietKiem() == 0) {
+				break;
+			} else {
+				RealMain();
+			}
+		case 15:
+			if (Labs3_HanhTrinhXeLua() == 0) {
+				break;
+			} else {
+				RealMain();
+			}
+		case 16:
+			if (Labs3_TraGop() == 0) {
 				break;
 			} else {
 				RealMain();

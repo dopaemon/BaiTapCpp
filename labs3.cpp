@@ -816,3 +816,252 @@ int Labs3_DaySo() {
     // End Menu
     return menu;
 }
+
+double CanBac2(double n) {
+    double x = n;
+    double y = 1.0;
+    double chinhxac = 1e-6;
+
+    while (x - y > chinhxac) {
+        x = (x + y) / 2;
+        y = n / x;
+    }
+
+	cout << "\nCăn bậc 2 của " << n << " là " << x << endl;
+	return 0;
+}
+
+int Labs3_CanBac2() {
+	double n;
+	cout << "Nhập vào N: "; cin >> n;
+	CanBac2(n);
+
+	// Start Menu
+    int menu = RM();
+    // End Menu
+    return menu;
+}
+
+int Labs3_UocChungBoiChung_a(int m, int n) {
+    int max = 0;
+    for (int i = 1; i <= m && i <= n; ++i) {
+        if (m % i == 0 && n % i == 0) {
+            max = i;
+        }
+    }
+
+    cout << "Ước chung của " << m << " và " << n << " là: ";
+    for (int i = 1; i <= max; ++i) {
+        if (max % i == 0) {
+            cout << i << " ";
+        }
+    }
+    cout << endl;
+    return 0;
+}
+
+int Labs3_UocChungBoiChung_b(int m, int n) {
+    int max = 0;
+	int s;
+    for (int i = 1; i <= m && i <= n; ++i) {
+        if (m % i == 0 && n % i == 0) {
+            max = i;
+        }
+    }
+
+    cout << "Ước chung lớn nhất của " << m << " và " << n << " là: " << max << endl;
+    return 0;
+}
+
+int Labs3_UocChungBoiChung_c(int m, int n) {
+    int max = 0;
+	int min;
+    for (int i = 1; i <= m && i <= n; ++i) {
+        if (m % i == 0 && n % i == 0) {
+            max = i;
+        }
+    }
+
+	min = (m * n) / max;
+
+    cout << "Ước chung nhỏ nhất của " << m << " và " << n << " là: " << min << endl;
+    return 0;
+}
+
+int Labs3_UocChungBoiChung_d(int m, int n) {
+    int s = 0;
+	for (int i = 1; i <= m; ++i) {
+        if (m % i == 0) {
+            s = s + i;
+        }
+    }
+
+	if (s > n) {
+		cout << "Tổng các ước của m = " << m << " là " << s << " và lớn hơn n = " << n << endl;
+	} else if (s < n) {
+		cout << "Tổng các ước của m = " << m << " là " << s << " và nhỏ hơn n = " << n << endl;
+	} else {
+		cout << "Tổng các ước của m = " << m << " là " << s << " và bằng n = " << n << endl;
+	}
+
+    return 0;
+}
+
+int Labs3_UocChungBoiChung() {
+	int m, n;
+	cout << "Nhập vào M: "; cin >> m;
+	cout << "Nhập vào N: "; cin >> n;
+	cout << endl << "a)"<< endl;
+	Labs3_UocChungBoiChung_a(m, n); cout << endl << "b)"<< endl;
+	Labs3_UocChungBoiChung_b(m, n); cout << endl << "c)"<< endl;
+	Labs3_UocChungBoiChung_c(m, n); cout << endl << "d)"<< endl;
+	Labs3_UocChungBoiChung_d(m, n);
+
+	// Start Menu
+    int menu = RM();
+    // End Menu
+    return menu;
+}
+
+int Labs3_TroChoiDoanSo() {
+	srand(time(NULL));
+	int unsigned a, b, c;
+	cout << "Nhập vào số bắt đầu khoảng: "; cin >> a;
+	cout << "Nhập vào số kết thúc khoảng: "; cin >> b;
+	cout << "Nhập vào số dự đoán: "; cin >> c;
+	int unsigned d = rand() % b + a;
+	if (c == d) {
+		cout << "Chúc mừng, kết quả " << c << " của bạn dự đoán là đúng\n";
+	} else {
+		cout << "Kết quả " << c << " của bạn dự đoán chưa chính xác kết quả đúng là " << d << "\n";
+	}
+
+	// Start Menu
+    int menu = RM();
+    // End Menu
+    return menu;
+}
+int Labs3_SoDinhDanh_func(int num[9]) {
+    int s = 0;
+
+    for (int i = 0; i < 9; ++i) {
+        s = s + (i + 1) * num[i];
+    }
+
+    int lnum = (s % 11 == 0) ? 0 : (11 - (s % 11));
+
+    cout << "Số cuối: " << lnum << endl;
+
+    cout << "ISBN: ";
+    for (int i = 0; i < 9; ++i) {
+        cout << num[i];
+        if (i == 0 || i == 4) {
+            cout << '-';
+        }
+    }
+    cout << '-' << lnum << endl;
+	return 0;
+}
+
+int Labs3_SoDinhDanh() {
+	int a[9];
+    for (int i = 0; i < 9; ++i) {
+		cout << "Nhập vào số " << i + 1 << " của dãy ISBN: ";
+        cin >> a[i];
+    }
+	
+	Labs3_SoDinhDanh_func(a);
+	
+	// Start Menu
+    int menu = RM();
+    // End Menu
+    return menu;
+}
+
+int Labs3_TaiKhoanTietKiem() {
+	double a, b;
+	int c;
+	
+	cout << "Nhập số tiền muốn gửi [VND]: "; cin >> a;
+	cout << "Nhập lãi xuất hàng tháng [%]: "; cin >> b;
+	cout << "Nhập số tháng: "; cin >> c;
+
+	cout << "\nSố tiền nhận được khi gửi ngân hàng " 
+	     << a 
+		 << " VND có lãi xuất " 
+		 << b 
+		 << "% trong " 
+		 << c 
+		 << " tháng là " 
+		 << a * pow(1 + b / 100, c) << " VND " << endl;
+
+	// Start Menu
+    int menu = RM();
+    // End Menu
+    return menu;
+}
+
+int Labs3_HanhTrinhXeLua() {
+	int a, b, c, d;
+	cout << "Nhập khoản cách giữa ga A và B [km]: "; cin >> a;
+	cout << "Nhập vận tốc của tàu [km/h]: "; cin >> b;
+	cout << "Nhập số ga tàu sẻ dừng lại: "; cin >> c;
+	cout << "Nhập thời gian tàu ngừng lại [minute]: "; cin >> d;
+	
+	double thoi_gian_a_den_b = (double)a / b;
+    double thoi_gian_dung_tai_ga = (double)(c * d) / 60.0;
+    thoi_gian_a_den_b += thoi_gian_dung_tai_ga;
+
+    int h = 7 + (int)thoi_gian_a_den_b;
+    int m = (int)((thoi_gian_a_den_b - (int)(thoi_gian_a_den_b)) * 60 + 0.5);
+	
+	cout << "Tàu sẽ đến ga B vào lúc: " << h << " giờ " << m << " phút" << endl;
+
+	// Start Menu
+    int menu = RM();
+    // End Menu
+    return menu;
+}
+
+int Labs3_TraGop() {
+	double a, b, c, d, e, g, h, j, k;
+	int f = 0;
+    int so_thang = 0;
+
+    cout << "Nhập giá của xe [VND]: "; cin >> a;
+    cout << "Nhập số tiền trả trước [VND]: "; cin >> b;
+    cout << "Nhập số lãi xuất hàng tháng [%]: "; cin >> c;
+	cout << "Nhập số tiền trả hàng tháng [VND] <= " << a - b << ": "; cin >> d;
+
+	g = (g / 100); // lãi xuất
+	e = a - b; // số tiền còn lại
+	h = e * (g * 1); // số tiền lãi phải trả trong tháng
+	
+	cout << "h: " << h << endl;
+	
+	k = h + d; // số tiền lãi phải trả trong tháng + số tiền trả hàng tháng
+	
+	cout << "k: " << k << endl;
+	
+	// i = số tiền còn lại
+	// 
+	// i = số tiền còn lại - h
+	for(int i = e; ;i = i - k) {
+		cout << i << endl;
+		if ( i == 0 ) {
+			break;
+		} else {
+			f++;
+			j = i;
+		}
+	}
+	
+    cout << "Sau " << f << " tháng, chị Oanh đã trả hết nợ." << endl;
+    cout << "Trong tháng cuối cùng, chị Oanh phải trả: " << j << " đồng." << endl;
+
+	
+	// Start Menu
+    int menu = RM();
+    // End Menu
+    return menu;
+}

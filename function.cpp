@@ -143,3 +143,23 @@ int Labs3_DaySo_e_for(int n);
 int Labs3_DaySo_e_while(int n);
 int Labs3_DaySo_e_do_while(int n);
 int Labs3_DaySo();
+
+double CanBac2(double n);
+int Labs3_CanBac2();
+
+int Labs3_UocChungBoiChung_a(int m, int n);
+int Labs3_UocChungBoiChung_b(int m, int n);
+int Labs3_UocChungBoiChung_c(int m, int n);
+int Labs3_UocChungBoiChung_d(int m, int n);
+int Labs3_UocChungBoiChung();
+
+int Labs3_TroChoiDoanSo();
+
+int Labs3_SoDinhDanh_func(int num[9]);
+int Labs3_SoDinhDanh();
+
+int Labs3_TaiKhoanTietKiem();
+
+int Labs3_HanhTrinhXeLua();
+
+int Labs3_TraGop();
