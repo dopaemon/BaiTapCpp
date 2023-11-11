@@ -611,3 +611,208 @@ int Labs3_UocSo() {
     // End Menu
     return menu;
 }
+
+int Labs3_DaySo_a_for(int n) {
+	double s = 0;
+	for(int i = 1; i <= n; i++) {
+		s = s + ((double)1 / i);
+	}
+	cout << "N = " << n <<  " | S = " << s << " (for)" << endl;
+	
+	return 0;
+}
+
+int Labs3_DaySo_a_while(int n) {
+	double s = 0;
+	int i = 1;
+	while(i <= n) {
+		s = s + ((double)1 / i);
+		i++;
+	}
+	cout << "N = " << n <<  " | S = " << s << " (while)" << endl;
+	
+	return 0;
+}
+
+int Labs3_DaySo_a_do_while(int n) {
+	double s = 0;
+	int i = 1;
+	do {
+		s = s + ((double)1 / i);
+		i++;
+	} while(i <= n);
+	cout << "N = " << n <<  " | S = " << s << " (do while)" << endl;
+	
+	return 0;
+}
+
+int Labs3_DaySo_b_for(int n) {
+	double s = 0;
+	for(int i = 1; i <= n; i++) {
+		s = s + ((i + (double)1) / (i * i));
+	}
+	cout << "N = " << n <<  " | S = " << s << " (for)" << endl;
+	
+	return 0;
+}
+
+int Labs3_DaySo_b_while(int n) {
+	double s = 0;
+	int i = 1;
+	while(i <= n) {
+		s = s + ((i + (double)1) / (i * i));
+		i++;
+	}
+	cout << "N = " << n <<  " | S = " << s << " (while)" << endl;
+	
+	return 0;
+}
+
+int Labs3_DaySo_b_do_while(int n) {
+	double s = 0;
+	int i = 1;
+	do {
+		s = s + ((i + (double)1) / (i * i));
+		i++;
+	} while(i <= n);
+	cout << "N = " << n <<  " | S = " << s << " (do while)" << endl;
+	
+	return 0;
+}
+
+int Labs3_DaySo_c_for(int n) {
+	double s = 0;
+	for(int i = 1; i <= n; i++) {
+		s = s + (((((double)-1) * i) * i) / i + (double)1);
+	}
+	cout << "N = " << n <<  " | S = " << s << " (for)" << endl;
+	
+	return 0;
+}
+
+int Labs3_DaySo_c_while(int n) {
+	double s = 0;
+	int i = 1;
+	while(i <= n) {
+		s = s + (((((double)-1) * i) * i) / i + (double)1);
+		i++;
+	}
+	cout << "N = " << n <<  " | S = " << s << " (while)" << endl;
+	
+	return 0;
+}
+
+int Labs3_DaySo_c_do_while(int n) {
+	double s = 0;
+	int i = 1;
+	do {
+		s = s + (((((double)-1) * i) * i) / i + (double)1);
+		i++;
+	} while(i <= n);
+
+	cout << "N = " << n <<  " | S = " << s << " (do while)" << endl;
+	
+	return 0;
+}
+
+int Labs3_DaySo_d_for(int n) {
+	double s = 0;
+	for(int i = 1; i <= n; i++) {
+		s = s + ((double)1 / (i * (i + 1)));
+	}
+	cout << "N = " << n <<  " | S = " << s << " (for)" << endl;
+	
+	return 0;
+}
+
+int Labs3_DaySo_d_while(int n) {
+	double s = 0;
+	int i = 1;
+	while(i <= n) {
+		s = s + ((double)1 / (i * (i + 1)));
+		i++;
+	}
+	cout << "N = " << n <<  " | S = " << s << " (while)" << endl;
+	
+	return 0;
+}
+
+int Labs3_DaySo_d_do_while(int n) {
+	double s = 0;
+	int i = 1;
+	do {
+		s = s + ((double)1 / (i * (i + 1)));
+		i++;
+	} while(i <= n);
+
+	cout << "N = " << n <<  " | S = " << s << " (do while)" << endl;
+	
+	return 0;
+}
+
+int Labs3_DaySo_e_for(int n) {
+	double s1 = 1;
+	double s = 0;
+	for(int i = 1; i <= n; i++) {
+		s1 = s1 * i;
+		s = s + s1;
+	}
+	cout << "N = " << n <<  " | S = " << s << " (for)" << endl;
+	
+	return 0;
+}
+
+int Labs3_DaySo_e_while(int n) {
+	double s1 = 1;
+	double s = 0;
+	int i = 1;
+	while(i <= n) {
+		s1 = s1 * i;
+		s = s + s1;
+		i++;
+	}
+	cout << "N = " << n <<  " | S = " << s << " (while)" << endl;
+	
+	return 0;
+}
+
+int Labs3_DaySo_e_do_while(int n) {
+	double s1 = 1;
+	double s = 0;
+	int i = 1;
+	do {
+		s1 = s1 * i;
+		s = s + s1;
+		i++;
+	} while(i <= n);
+
+	cout << "N = " << n <<  " | S = " << s << " (do while)" << endl;
+	
+	return 0;
+}
+
+int Labs3_DaySo() {
+	int n;
+	cout << "Nhập vào N: "; cin >> n;
+	cout << endl << "a) for"<< endl;
+	Labs3_DaySo_a_for(n); cout << endl << "a) while" << endl;
+	Labs3_DaySo_a_while(n); cout << endl << "a) do while" << endl;
+	Labs3_DaySo_a_do_while(n); cout << endl << "b) for" << endl;
+	Labs3_DaySo_b_for(n); cout << endl << "b) while" << endl;
+	Labs3_DaySo_b_while(n); cout << endl << "b) do while" << endl;
+	Labs3_DaySo_b_do_while(n); cout << endl << "c) for" << endl;
+	Labs3_DaySo_c_for(n); cout << endl << "c) while" << endl;
+	Labs3_DaySo_c_while(n); cout << endl << "c) do while" << endl;
+	Labs3_DaySo_c_do_while(n); cout << endl << "d) for" << endl;
+	Labs3_DaySo_d_for(n); cout << endl << "d) while" << endl;
+	Labs3_DaySo_d_while(n); cout << endl << "d) do while" << endl;
+	Labs3_DaySo_d_do_while(n); cout << endl << "e) for"<< endl;
+	Labs3_DaySo_e_for(n); cout << endl << "e) while" << endl;
+	Labs3_DaySo_e_while(n); cout << endl << "e) do while" << endl;
+	Labs3_DaySo_e_do_while(n);
+
+	// Start Menu
+    int menu = RM();
+    // End Menu
+    return menu;
+}
