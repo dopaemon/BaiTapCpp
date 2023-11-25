@@ -1,3 +1,5 @@
+using namespace std;
+
 int RM() {
 	int menu;
 	// do { cout << "\nBạn có muốn quay lại Menu không ? [0/1]: "; cin >> menu; } while (menu != 0);

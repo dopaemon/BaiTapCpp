@@ -10,14 +10,36 @@
 
 using namespace std;
 
-// Định nghĩa hằng số và kiểu dữ liệu mới
-#include "globalVariable.cpp"
 
-// Khai báo nguyên mẫu function
-#include "function.cpp"
-
-// Utils
-#include "utils.cpp"
+#ifdef _WIN32
+	// Định nghĩa hằng số và kiểu dữ liệu mới
+	#include "library\\globalVariable.h"
+	
+	// Khai báo nguyên mẫu function
+	#include "library\\function.h"
+	
+	// Utils
+	#include "library\\utils.h"
+	
+	// Labs
+	#include "library\\labs1.h"
+	#include "library\\labs2.h"
+	#include "library\\labs3.h"
+#elif __linux__
+	// Định nghĩa hằng số và kiểu dữ liệu mới
+	#include "./library/globalVariable.h"
+	
+	// Khai báo nguyên mẫu function
+	#include "./library/function.h"
+	
+	// Utils
+	#include "./library/utils.h"
+	
+	// Labs
+	#include "./library/labs1.h"
+	#include "./library/labs2.h"
+	#include "./library/labs3.h"
+#endif
 
 int main() {
 	exit(RealMain());
@@ -54,9 +76,3 @@ int RealMain() {
 	}
 	return 0;
 }
-
-// Start Custom Cpp
-#include "labs1.cpp"
-#include "labs2.cpp"
-#include "labs3.cpp"
-// End Custom Cpp
