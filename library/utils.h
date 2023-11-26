@@ -11,6 +11,11 @@ int RM() {
 	return menu;
 }
 
+void enter() {
+	cout << endl << "Nhấn Enter để thoát !!!" << endl;
+	return;
+}
+
 int clear() {
 #if __linux__
 	system("clear");

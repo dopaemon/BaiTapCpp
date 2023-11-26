@@ -1,9 +1,6 @@
-int Labs4_SoNguyen() {
+int Labs4_SoNguyen_Menu() {
 	unsigned int n, a;
-
-	cout << "Nhập vào số Nguyên N: "; cin >> n;
-	cout << endl;
-
+	
 	cout << "Menu Số Nguyên: " << endl
 		 << "1) Xuất các số từ 1 tới n, các số cách nhau 1 dấu Tab và mỗi dòng chứa 10 số." << endl
 		 << "2) Đếm số lượng các số chia hết cho 3 nhưng không chia hết cho 4 trong đoạn [1..n]." << endl
@@ -14,62 +11,97 @@ int Labs4_SoNguyen() {
 		 << "7) Đổi số n sang hệ nhị phân. Ví dụ: n = 1234/10 tương ứng với 10011010010/2."<< endl
 		 << "8) Kiểm tra số n có phải là số hoàn hảo (còn gọi là số hoàn chỉnh, số hoàn thiện)? \nBiết rằng, số hoàn hảo là số có tổng các ước bằng hai lần chính nó. Ví dụ: 6, 28 là \nsố hoàn chỉnh vì 6 = (1+2+3+6)/2, 28 = (1+2+4+7+14+28)/2." << endl
 		 << "9) Xuất tất cả các số hoàn chỉnh trong phạm vi [1..n]. Ví dụ: Với n = 30 thì xuất 6, 28." << endl
-		 << "10) Tìm số nguyên m lớn nhất sao cho tổng 1+2+…+m ≤ n." << endl;
+		 << "10) Tìm số nguyên m lớn nhất sao cho tổng 1+2+…+m ≤ n." << endl
+		 << "0) Thoát";
 
 	do {
 		cout << "\nChọn chức năng [0/10]: "; cin >> a;
 	} while (n < 0);
 	
+	cout << "Nhập vào số Nguyên N: "; cin >> n;
+	cout << endl;
+	
 	switch(a) {
 		case 1:
 			cout << "1) Xuất các số từ 1 tới n, các số cách nhau 1 dấu Tab và mỗi dòng chứa 10 số." << endl;
 			Labs3_SoNguyen_a(n); // 1
+			enter();
+			_getch();
 			break;
 		case 2:
 			cout << "2) Đếm số lượng các số chia hết cho 3 nhưng không chia hết cho 4 trong đoạn [1..n]." << endl;
 			Labs3_SoNguyen_b(n); // 2
+			enter();
+			_getch();
 			break;
 		case 3:
 			cout << "3) Đếm số lượng chữ số của n. Ví dụ: n = 12345 thì số lượng chữ số là 5." << endl;
 			Labs3_SoNguyen_c(n); // 3
+			enter();
+			_getch();
 			break;
 		case 4:
 			cout << "4) Đảo ngược số n. Ví dụ: n = 12345 thì sau khi đảo ngược, n = 54321." << endl;
 			Labs3_SoNguyen_d(n); // 4
+			enter();
+			_getch();
 			break;
 		case 5:
 			cout << "5) Tính tổng các chữ số trong n. Ví dụ: n = 12345 thì tổng các chữ số là 1+2+3+4+5 = 15." << endl;
 			Labs3_SoNguyen_e(n); // 5
+			enter();
+			_getch();
 			break;
 		case 6:
 			cout << "6) Cho biết chữ số đầu tiên trong n. Ví dụ: n = 12345 thì chữ số đầu tiên là 1." << endl;
 			Labs3_SoNguyen_f(n); // 6
+			enter();
+			_getch();
 			break;
 		case 7:
 			cout << "7) Đổi số n sang hệ nhị phân. Ví dụ: n = 1234/10 tương ứng với 10011010010/2." << endl;
 			Labs3_SoNguyen_g(n); // 7
+			enter();
+			_getch();
 			break;
 		case 8:
 			cout << "8) Kiểm tra số n có phải là số hoàn hảo (còn gọi là số hoàn chỉnh, số hoàn thiện)? \nBiết rằng, số hoàn hảo là số có tổng các ước bằng hai lần chính nó. Ví dụ: 6, 28 là \nsố hoàn chỉnh vì 6 = (1+2+3+6)/2, 28 = (1+2+4+7+14+28)/2." << endl;
 			Labs3_SoNguyen_h(n); // 8
+			enter();
+			_getch();
 			break;
 		case 9:
 			cout << "9) Xuất tất cả các số hoàn chỉnh trong phạm vi [1..n]. Ví dụ: Với n = 30 thì xuất 6, 28." << endl;
 			Labs3_SoNguyen_i(n); // 9
+			enter();
+			_getch();
 			break;
 		case 10:
 			cout << "10) Tìm số nguyên m lớn nhất sao cho tổng 1+2+…+m ≤ n." << endl;
 			Labs3_SoNguyen_j(n); // 10
+			enter();
+			_getch();
 			break;
+		case 0:
+			return 0;
 		default:
 			cout << "Không có lựa chọn . . . ";
+			_getch();
 			break;
 	}
+	return 1;
+}
 
+int Labs4_SoNguyen() {
+	for ( ; ; ) {
+		clear();
+		if (Labs4_SoNguyen_Menu() == 0) { break; }
+	}
+	
 	// Start Menu
-        int menu = RM();
-        // End Menu
-        return menu;
+    int menu = RM();
+    // End Menu
+    return menu;
 }
 
 double Labs4_tuyentinh(double x) {
