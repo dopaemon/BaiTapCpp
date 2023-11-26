@@ -175,7 +175,7 @@ double Labs4_sin(double x, double do_chinh_xac);
 double Labs4_cos(double x, double do_chinh_xac);
 int Labs4_KhaiTrienTaylor();
 
-int Labs4_soFibonacciN(int n);
-void labs4_lietKeFibonacciDenN(int n);
-void labs4_lietKeNFibonacciDau(int n);
+int Labs4_SoFinbonacci_a(int n);
+void Labs4_SoFinbonacci_b(int n);
+void Labs4_SoFinbonacci_c(int n);
 int Labs4_SoFinbonacci();

@@ -92,7 +92,7 @@ int Labs4_KhaiTrienTaylor() {
     return menu;
 }
 
-int Labs4_soFibonacciN(int n) {
+int Labs4_SoFinbonacci_a(int n) {
     if (n <= 1) {
         return n;
     }
@@ -107,7 +107,7 @@ int Labs4_soFibonacciN(int n) {
     return b;
 }
 
-void labs4_lietKeFibonacciDenN(int n) {
+void Labs4_SoFinbonacci_b(int n) {
     int a = 0, b = 1;
     while (a <= n) {
         cout << a << " ";
@@ -118,7 +118,7 @@ void labs4_lietKeFibonacciDenN(int n) {
 	return;
 }
 
-void labs4_lietKeNFibonacciDau(int n) {
+void Labs4_SoFinbonacci_c(int n) {
     if (n >= 1) {
         cout << "0 ";
     }
@@ -139,13 +139,13 @@ void labs4_lietKeNFibonacciDau(int n) {
 int Labs4_SoFinbonacci() {
 	int n;
 	cout << "Nhập vào số N: "; cin >> n;
-	cout << "Số Fibonacci thứ " << n << " là: " << Labs4_soFibonacciN(n) << endl;
+	cout << "Số Fibonacci thứ " << n << " là: " << Labs4_SoFinbonacci_a(n) << endl;
 	cout << "\nCác số Fibonacci nhỏ hơn hoặc bằng " << n << " là:\n";
-    labs4_lietKeFibonacciDenN(n);
+    Labs4_SoFinbonacci_b(n);
 	cout << "\n\nNhập số lượng số Fibonacci muốn hiển thị: ";
     cin >> n;
     cout << "\nCác số Fibonacci đầu tiên là:\n";
-    labs4_lietKeNFibonacciDau(n);
+    Labs4_SoFinbonacci_c(n);
 
 	// Start Menu
     int menu = RM();
