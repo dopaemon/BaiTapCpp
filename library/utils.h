@@ -40,7 +40,8 @@ int Menu() {
 	cout << "Menu bài tập:" << endl
 		 << " 1 - Labs 1" << endl
 		 << " 2 - Labs 2" << endl
-		 << " 3 - Labs 3" << endl;
+		 << " 3 - Labs 3" << endl
+		 << " 4 - Labs 4" << endl;
 	line(35, 1);
 	cout << "Options:" << endl
 		 << " 0 - Exits\n";
@@ -133,6 +134,28 @@ int Menulabs3() {
 		 << " 14 - tài khoản tiết kiệm" << endl
 		 << " 15 - Hành trình xe lửa" << endl
 		 << " 16 - Trả Góp" << endl;
+	line(35, 1);
+	cout << "Options:" << endl
+		 << " 0 - Exits\n";
+	line(35, 1);
+	return 0;
+}
+
+int Menulabs4() {
+	line(35, 1);
+	cout << "Tên: Trần Nguyễn Tuấn Anh" << endl
+		 << "Lớp: CTK47A" << endl
+		 << "MSSV: 2312577" << endl
+		 << "Môn: Nguyên Lý Lập Trình Cấu Trúc" << endl;
+	line(35, 1);
+	cout << "Menu bài tập:" << endl
+		 << "Labs 4: " << endl
+		 << " 1 - Số Nguyên" << endl
+		 << " 2 - Đổi Cơ Số" << endl
+		 << " 3 - Số Nguyên Tố" << endl
+		 << " 4 - Ước số" << endl
+		 << " 5 - Khai triển taylor" << endl
+		 << " 6 - Số fibonacci" << endl;
 	line(35, 1);
 	cout << "Options:" << endl
 		 << " 0 - Exits\n";
@@ -445,6 +468,51 @@ int InputLabs3(int a) {
 			}
 		case 16:
 			if (Labs3_TraGop() == 0) {
+				break;
+			} else {
+				RealMain();
+			}
+		default:
+			cout << "Cần chọn ít nhất một lựa chọn !!!";
+	}
+	return a;
+}
+
+int InputLabs4(int a) {
+	switch (a) {
+		case 0: exit(0);
+		case 1:
+			if (Labs3_SoNguyen() == 0) {
+				break;
+			} else {
+				RealMain();
+			}
+		case 2:
+			if (Labs3_ChuyenDoiHeCoSo() == 0) {
+				break;
+			} else {
+				RealMain();
+			}
+		case 3:
+			if (Labs3_SoNguyenTo() == 0) {
+				break;
+			} else {
+				RealMain();
+			}
+		case 4:
+			if (Labs3_UocSo() == 0) {
+				break;
+			} else {
+				RealMain();
+			}
+		case 5:
+			if (Labs4_KhaiTrienTaylor() == 0) {
+				break;
+			} else {
+				RealMain();
+			}
+		case 6:
+			if (Labs4_SoFinbonacci() == 0) {
 				break;
 			} else {
 				RealMain();

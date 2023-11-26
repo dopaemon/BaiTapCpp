@@ -25,6 +25,7 @@ using namespace std;
 	#include "library\\labs1.h"
 	#include "library\\labs2.h"
 	#include "library\\labs3.h"
+	#include "library\\labs4.h"
 #elif __linux__
 	// Định nghĩa hằng số và kiểu dữ liệu mới
 	#include "./library/globalVariable.h"
@@ -39,6 +40,7 @@ using namespace std;
 	#include "./library/labs1.h"
 	#include "./library/labs2.h"
 	#include "./library/labs3.h"
+	#include "./library/labs4.h"
 #endif
 
 int main() {
@@ -69,6 +71,12 @@ int RealMain() {
 			Menulabs3();
 			cout << "Nhập: "; cin >> input_menu;
 			InputLabs3(input_menu);
+			break;
+		} else if (input_menu == 4) {
+			clear();
+			Menulabs4();
+			cout << "Nhập: "; cin >> input_menu;
+			InputLabs4(input_menu);
 			break;
 		} else if(input_menu == 0) {
 			break;

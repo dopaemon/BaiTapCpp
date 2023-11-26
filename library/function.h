@@ -13,6 +13,8 @@ int Menulabs2();
 int MenuLuyenTap();
 int InputLabs1(int a);
 int InputLabs2(int a);
+int InputLabs3(int a);
+int InputLabs4(int a);
 
 // labs1
 int Labs1_Bien();
@@ -163,3 +165,17 @@ int Labs3_TaiKhoanTietKiem();
 int Labs3_HanhTrinhXeLua();
 
 int Labs3_TraGop();
+
+// labs4
+double Labs4_tuyentinh(double x);
+double Labs4_luythua(double co_so, int so_mu);
+double Labs4_giaithua(int n);
+double Labs4_exp(double x, double do_chinh_xac);
+double Labs4_sin(double x, double do_chinh_xac);
+double Labs4_cos(double x, double do_chinh_xac);
+int Labs4_KhaiTrienTaylor();
+
+int Labs4_soFibonacciN(int n);
+void labs4_lietKeFibonacciDenN(int n);
+void labs4_lietKeNFibonacciDau(int n);
+int Labs4_SoFinbonacci();
