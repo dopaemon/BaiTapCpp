@@ -96,6 +96,8 @@ int Labs3_PhepToanSoHoc();
 int Labs3_output(int number);
 unsigned int Labs3_TimLuyThua(unsigned int b, unsigned int n);
 int Labs3_DoiCoSo(unsigned int n, unsigned int b);
+
+int Labs3_ChuyenDoiHeCoSo_Menu();
 int Labs3_ChuyenDoiCoSo();
 
 int Labs3_SoNguyen_a(unsigned int n);
@@ -168,6 +170,7 @@ int Labs3_TraGop();
 
 // labs4
 int Labs4_SoNguyen();
+int Labs4_SoNguyen_Menu();
 
 double Labs4_tuyentinh(double x);
 double Labs4_luythua(double co_so, int so_mu);

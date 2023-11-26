@@ -352,20 +352,27 @@ string ChuyenDoiHeCoSo(int n, int b) {
     return ketQua.empty() ? "0" : ketQua;
 }
 
-int Labs3_ChuyenDoiHeCoSo() {
-	int n, b;
-
-    cout << "Nhập số nguyên dương n: ";
-    cin >> n;
+int Labs3_ChuyenDoiHeCoSo_Menu() {
+	int n, b, c;
 
     cout << "Chọn hệ cơ số:\n";
     cout << "1. Đổi sang hệ nhị phân (b=2)\n";
     cout << "2. Đổi sang hệ bát phân (b=8)\n";
     cout << "3. Đổi sang hệ thập lục phân (b=16)\n";
     cout << "4. Đổi sang hệ cơ số 7 (b=7)\n";
+	cout << "0. Thoát chương trình\n";
 
-    cout << "[1, 2, 3, 4]: ";
-    cin >> b;
+    cout << "[0, 1, 2, 3, 4]: ";
+    cin >> c;
+	
+	if (c == 1) { b = 2; }
+	else if (c == 2) { b = 8; }
+	else if (c == 3) { b = 16; }
+	else if (c == 4) { b = 7; }
+	else if (c == 0) { return 0; }
+
+	cout << "Nhập số nguyên dương n: ";
+    cin >> n;
 
     if ((b < 2) || (b > 16) || (b > 10 && b != 7)) {
         cout << "Hệ cơ số không hợp lệ.\n";
@@ -373,7 +380,17 @@ int Labs3_ChuyenDoiHeCoSo() {
         string ketQua = ChuyenDoiHeCoSo(n, b);
         cout << "Kết quả: " << ketQua << endl;
     }
+	return 1;
+}
 
+int Labs3_ChuyenDoiCoSo() {
+	for ( ; ; ) {
+		if (Labs3_ChuyenDoiHeCoSo_Menu() == 0) {
+			clear();
+			break;
+		}
+	}
+	
 	// Start Menu
     int menu = RM();
     // End Menu
