@@ -300,9 +300,9 @@ int Labs3_SoNguyen() {
 	Labs3_SoNguyen_j(n);
 
 	// Start Menu
-        int menu = RM();
-        // End Menu
-        return menu;
+    int menu = RM();
+    // End Menu
+    return menu;
 }
 
 int Labs3_ChiSoKhoiCoThe() {

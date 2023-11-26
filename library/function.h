@@ -167,6 +167,8 @@ int Labs3_HanhTrinhXeLua();
 int Labs3_TraGop();
 
 // labs4
+int Labs4_SoNguyen();
+
 double Labs4_tuyentinh(double x);
 double Labs4_luythua(double co_so, int so_mu);
 double Labs4_giaithua(int n);

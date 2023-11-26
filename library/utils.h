@@ -482,7 +482,7 @@ int InputLabs4(int a) {
 	switch (a) {
 		case 0: exit(0);
 		case 1:
-			if (Labs3_SoNguyen() == 0) {
+			if (Labs4_SoNguyen() == 0) {
 				break;
 			} else {
 				RealMain();
